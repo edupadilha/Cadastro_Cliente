@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro de Clientes</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="footer.css" />
+        <link rel="stylesheet" href="navbar.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="nav">
+            <h1 class="logo">Cadastro de Clientes</h1>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clientes.html">Cliente</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Navbar -->
+        <!-- ENVOLVA TUDO DENTRO DO .page-wrapper -->
+        <div class="page-wrapper">
+            <main>
+                <h1>Cadastro de Clientes</h1>
+
+                <form id="form">
+                    <input id="nome" placeholder="Nome" required>
+                    <input id="email" placeholder="E-mail" required>
+                    <input id="telefone" placeholder="Telefone" />
+                    <input id="endereco" placeholder="Endereço" />
+                    <button type="submit">Cadastrar</button>
+                </form>
+
+                <a href="clientes.html">Listar Clientes</a>
+            </main>
+
+            <footer>
+                <div class="footer__container">
+                    <div class="footer__col">
+                        <h4>Cadastro de Clientes</h4>
+                        <p>Registro Simples de Cadastro de Cliente</p>
+                        <p>- Projeto html, js e MySQL.</p>
+                    </div>
+
+                    <div class="footer__col">
+                        <h5>Contato</h5>
+                        <p>Telefone: (11) 9999-9999</p>
+                        <p>E-mail: contato@cadastrocliente.com.br</p>
+                    </div>
+
+                    <div class="footer__col">
+                        <h5>Horário</h5>
+                        <p>Seg. - Sex: 08:00 - 18:00</p>
+                        <p>Sáb: 08:00 - 12:00</p>
+                    </div>
+                </div>
+                <div class="footer__botton">
+                    <span id="anoSpan"></span>
+                    <button class="link-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                        Voltar ao Topo
+                    </button>
+                </div>
+            </footer>
+        </div>
+
+        <script src="cadastrar.js"></script>
+    </body>
+</html>
