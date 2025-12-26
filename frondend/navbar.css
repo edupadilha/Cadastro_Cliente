@@ -4,10 +4,8 @@ nav.nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: linear-gradient(32deg,
-        rgba(36, 190, 235, 1) 0%, 
-        rgba(11, 11, 82, 1) 29%, 
-        rgba(117, 117, 117, 1) 100%);
+    background: #0f4c5c url('menu_top.jpg') no-repeat center center;
+    background-size: cover; /* ajusta a imagem para cobrir todo o navbar */
     color: #fff;
     border-radius: 5px;
     position: fixed;
@@ -19,11 +17,30 @@ nav.nav {
     width: 100%;
 }
 
-.logo {
-    font-size: 22px;
+/* Container da logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo da imagem da logo */
+.logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); /* opcional: sombra suave */
+}
+
+/* Estilo do texto */
+.logo-text {
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
-    text-decoration: none;
+    margin: 0;
+    white-space: nowrap;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5); /* opcional: contraste com fundo */
 }
 
 .menu {
@@ -44,7 +61,7 @@ nav.nav {
 }
 
 .menu li a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(12, 12, 49, 0.512);
 }
 
 .hamburger {
@@ -68,6 +85,21 @@ nav.nav {
         flex-direction: column;
         align-items: stretch;
         padding: 15px;
+        background-size: 100% auto; /* ajusta imagem para largura total */
+    }
+
+    .logo-container {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .logo-img {
+        height: 32px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+        color: rgb(27, 255, 1);
     }
 
     .menu {
@@ -77,9 +109,9 @@ nav.nav {
         right: 20px;
         top: 60px;
         background: linear-gradient(32deg,
-        rgba(36, 190, 235, 1) 0%, 
-        rgba(11, 11, 82, 1) 29%, 
-        rgba(117, 117, 117, 1) 100%);
+            rgba(36, 190, 235, 1) 0%, 
+            rgba(11, 11, 82, 1) 29%, 
+            rgba(117, 117, 117, 1) 100%);
         padding: 15px;
         border-radius: 8px;
         gap: 15px;
@@ -104,5 +136,5 @@ nav.nav {
 
 /* --- AJUSTE PARA O CONTEÚDO NÃO FICAR POR BAIXO DO NAVBAR --- */
 .page-wrapper {
-    margin-top: 90px; /* aumentado de 70px para 90px */
+    margin-top: 90px;
 }
